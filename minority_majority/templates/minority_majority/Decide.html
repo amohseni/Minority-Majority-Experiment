@@ -1,0 +1,15 @@
+{% extends "minority_majority/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Decide
+{% endblock %}
+
+{% block content %}
+
+    {% formfield player.decision with label='What will you do?' %}
+    {% next_button %}
+
+    {% include 'minority_majority/Instructions.html' %}
+
+{% endblock %}

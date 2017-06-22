@@ -1,0 +1,36 @@
+{% extends "screening/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Solution to Understanding Question {{ num_q }} of {{ total_q }}
+{% endblock %}
+
+{% block content %}
+
+    {% if player.is_training_question_2_my_payoff_correct %}
+        <p class="text-success">Your answer {{player.training_question_2_my_payoff}} for yourself was correct.</p>
+    {% else %}
+        <p class="text-danger">Your answer {{player.training_question_2_my_payoff}} for yourself was incorrect</p>
+    {% endif %}
+    {% if player.is_training_question_1_other_payoff_correct %}
+        <p class="text-success">Your answer {{player.training_question_2_other_payoff}} for the other participant was correct.</p>
+    {% else %}
+        <p class="text-danger">Your answer {{player.training_question_2_other_payoff}} for the other participant was incorrect.</p>
+    {% endif %}
+
+    <p>
+        Suppose that you select Choose 4, while the other participant selects Choose 6.
+        What would be your payoffs respectively?
+    </p>
+    <p>
+        <strong>Solution:</strong> Payoffs for <strong>you</strong> would be
+        <strong>4 points</strong> and for the <strong>other participant</strong> would be
+        <strong>6 points</strong>.
+    </p>
+
+    {% next_button %}
+
+    {% include 'screening/Instructions.html' %}
+
+{% endblock %}
+

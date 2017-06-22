@@ -1,0 +1,36 @@
+# For importing the matching spreadsheet from a relative file path
+import os
+script_dir = os.path.dirname(__file__)
+rel_path = "matching/matching1.csv"
+abs_file_path = os.path.join(script_dir, rel_path)
+
+import random
+
+# For pseudo-random matching, import matching table CSV file
+import csv
+matchingTable = open(abs_file_path, 'rU')
+csv_matchingTable = csv.reader(matchingTable)
+
+m_string = []
+
+for row in csv_matchingTable:
+    m_string.append(row)
+
+m = [[int(float(j)) for j in i] for i in m_string]
+
+print m
+print m[0]
+print m[0][0]
+
+round_number = 1
+row_num = round_number - 1
+
+print m[round_number][1]
+
+matching_structure = [[m[row_num][0], m[row_num][1]],
+                      [m[row_num][2], m[row_num][3]]]
+print matching_structure
+
+r = [0, 4, -1, 6]
+random.choice(r)
+random.choice([x for x in r if x >= 0])

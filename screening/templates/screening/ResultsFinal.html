@@ -1,0 +1,38 @@
+{% extends "screening/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Final Question
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Are you interested and able to participate in a decision-making experiment beginning at 16:00 PST today?
+    </p>
+
+    <p>
+        The experiment and will take approximately 40 minutes,
+        in which you can earn between $4 and $8,
+        if you and the (seven) other participants successfully complete it.
+    </p>
+
+    {% formfield player.get_involved %}
+
+    <p>
+        Again, please only accept the invitation to the experiment
+        if you plan to participate in and complete the experiment.
+    </p>
+
+    <p>
+        If you accept, we may contact you in the next 30 minutes to give you a link to the experiment.
+    </p>
+
+    <p>
+        Thank you for your participation.
+        Your participation pay is: <strong>{{participation_pay}}</strong>
+    </p>
+
+    {% next_button %}
+
+{% endblock %}

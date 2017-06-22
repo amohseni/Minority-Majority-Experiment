@@ -1,0 +1,36 @@
+{% extends "minority_majority/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Introduction 1
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Welcome to this experiment by UC Irvine. Thank you for participating.
+    </p>
+
+    <p>
+        You are about to participate in a study of decision-making,
+        and you will be paid for your participation at the end of this session.
+        What you earn depends partly on your decisions and partly on the decisions of other participants.
+        You goal is to earn as much as you can, as it will augment your payment from the experiment.
+    </p>
+
+    {% next_button %}
+
+    {% include 'minority_majority/Instructions.html' %}
+
+{% endblock %}
+
+{% block styles %}
+    <style>
+    div#time-limit {
+       display: none;
+     }
+    div#timeout-seconds {
+       display: none;
+     }
+  </style>
+{% endblock %}

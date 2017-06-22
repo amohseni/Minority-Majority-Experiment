@@ -1,0 +1,19 @@
+{% extends "screening/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Introduction
+{% endblock %}
+
+{% block content %}
+
+    {% include 'minority_majority/Instructions.html' %}
+
+    <p>
+        For your convenience, these instructions will remain for the remainder of the questions.
+        Please press the next button.
+    </p>
+
+    {% next_button %}
+
+{% endblock %}

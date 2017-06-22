@@ -1,0 +1,75 @@
+{% extends "screening/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Understanding Question {{ num_q }} of 4
+{% endblock %}
+
+{% block content %}
+
+
+    {% if num_q == 1 %}
+        <p>
+            Suppose that <strong>you</strong> select <strong>Choose 6</strong> and the <strong>other participant</strong> also selects <strong>Choose 6</strong>.
+            <br>
+            What would be your payoffs, respectively?
+        </p>
+        <p>
+            {% formfield player.training_question_1_my_payoff with label='My payoff would be:' %}
+        </p>
+        <p>
+            {% formfield player.training_question_1_other_payoff with label='The other participant’s payoff would be:' %}
+        </p>
+    {% endif %}
+
+
+    {% if num_q == 2 %}
+        <p>
+            Suppose that <strong>you</strong> select <strong>Choose 4</strong> while the <strong>other participant</strong> selects <strong>Choose 6</strong>.
+            <br>
+            What would be your payoffs, respectively?
+        </p>
+        <p>
+            {% formfield player.training_question_2_my_payoff with label='My payoff would be:' %}
+        </p>
+        <p>
+            {% formfield player.training_question_2_other_payoff with label='The other participant’s payoff would be:' %}
+        </p>
+    {% endif %}
+
+
+    {% if num_q == 3 %}
+        <p>
+            Suppose that <strong>you</strong> select <strong>Choose 4</strong> and the <strong>other participant</strong> also selects <strong>Choose 4</strong>.
+            <br>
+            What would be your payoffs, respectively?
+        </p>
+        <p>
+            {% formfield player.training_question_3_my_payoff with label='My payoff would be:' %}
+        </p>
+        <p>
+            {% formfield player.training_question_3_other_payoff with label='The other participant’s payoff would be:' %}
+        </p>
+    {% endif %}
+
+
+    {% if num_q == 4 %}
+        <p>
+            Suppose that <strong>you</strong> select <strong>Choose 6</strong> while the <strong>other participant</strong> selects <strong>Choose 4</strong>.
+            <br>
+            What would be your payoffs, respectively?
+        </p>
+        <p>
+            {% formfield player.training_question_4_my_payoff with label='My payoff would be:' %}
+        </p>
+        <p>
+            {% formfield player.training_question_4_other_payoff with label='The other participant’s payoff would be:' %}
+        </p>
+    {% endif %}
+
+
+    {% next_button %}
+
+    {% include 'screening/Instructions.html' %}
+
+{% endblock %}

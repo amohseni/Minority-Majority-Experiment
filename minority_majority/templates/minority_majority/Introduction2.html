@@ -1,0 +1,24 @@
+{% extends "minority_majority/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Introduction 2
+{% endblock %}
+
+{% block content %}
+
+    <p>
+       In some of the rounds you might not interact with anyone.
+        If this happens, you will be asked to click 'OK' and wait while the other participants make their choices.
+    </p>
+
+    <p>
+       In each round in which you do interact with someone, you will be paired with a <em>randomly chosen</em> individual.
+        This individual is chosen at random again for each round.
+    </p>
+
+    {% next_button %}
+
+    {% include 'minority_majority/Instructions.html' %}
+
+{% endblock %}

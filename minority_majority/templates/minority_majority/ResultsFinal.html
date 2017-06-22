@@ -1,0 +1,32 @@
+{% extends "minority_majority/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Final Results
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Thank you so much for your participation.
+    </p>
+
+    <p>
+        The participation pay is: <strong>{{participation_pay}}</strong>
+    </p>
+
+    <p>
+        The completion pay is: <strong>{{completion_pay}}</strong>
+    </p>
+
+    <p>
+        And your performance in this experiment resulted in you earning an extra: <strong>{{random_payment}}</strong>.
+    </p>
+
+    <p>
+        So, your total earnings for this experiment are: <strong>{{total_payoff}}</strong>
+    </p>
+
+{% next_button %}
+
+{% endblock %}

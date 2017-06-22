@@ -1,0 +1,27 @@
+{% extends "minority_majority/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Introduction 3
+{% endblock %}
+
+{% block content %}
+
+    <p>
+       Your payment in the experiment will be determined by your success in the experiment.
+    </p>
+
+    <p>
+       The computer will randomly choose one round from each tens rounds of the experiment for payment.
+        These rounds will be added together to determine your payment at the end of the experiment.
+    </p>
+
+    <p>
+       On the next page, you will have to answer one question to make sure you understand the instructions correctly.
+    </p>
+
+    {% next_button %}
+
+    {% include 'minority_majority/Instructions.html' %}
+
+{% endblock %}

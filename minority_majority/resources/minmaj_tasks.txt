@@ -1,0 +1,13 @@
+MINMAJ TASK LIST
+
+X Rename payoff variabeles
+
+X Figure out how to remove the feedback page from reappearing after the first round
+
++ Figure out how to have groups
+
++ Figure out how to have simple [1,2] groups w/ sitting out
+
++ Figure out how to assign payments from a random round
+
++ Get full randomization table for 4:4, 5:3, 6:2 groups.
