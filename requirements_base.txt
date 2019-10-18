@@ -15,7 +15,7 @@ django-easymoney==0.7.1
 django-floppyforms==1.7.0
 django-idmap==0.4.1
 django-vanilla-views==1.0.4
-djangorestframework==3.4.6
+djangorestframework==3.9.1
 honcho==0.7.1
 huey==1.2.0
 IPy==0.83
