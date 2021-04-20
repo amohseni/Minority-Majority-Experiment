@@ -1,6 +1,6 @@
 asgi-redis==0.14.1
 asgiref==0.14.0
-autobahn==0.16.0
+autobahn==20.12.3
 Babel==2.3.4
 boto==2.42.0
 channels==0.17.3
