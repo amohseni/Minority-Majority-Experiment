@@ -34,7 +34,7 @@ redis==2.10.5
 requests==2.11.1
 schema==0.6.2
 six==1.10.0
-Twisted==16.2.0
+Twisted==22.2.0
 txaio==2.5.1
 unicodecsv==0.14.1
 whitenoise==3.2.1
